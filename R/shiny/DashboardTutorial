@@ -1,0 +1,245 @@
+```R
+#
+# This is a Shiny web application. You can run the application by clicking
+# the 'Run App' button above.
+#
+# Find out more about building applications with Shiny here:
+#
+#    http://shiny.rstudio.com/
+#
+
+library(shiny)
+library(shinydashboard)
+
+ui <- dashboardPage(skin = "blue",
+                    dashboardHeader(title = "Tutorial / Codes",
+                                    dropdownMenu(type = "messages",
+                                                 messageItem(
+                                                         from = "Sales Dept",
+                                                         message = "Sales are steady this month.",
+                                                         icon = shiny::icon("user"),
+                                                         time = "2014-12-01",
+                                                         href = "www.abc.com"
+                                                 ),
+                                                 messageItem(
+                                                         from = "New User",
+                                                         message = "How do I register?",
+                                                         icon = icon("question"),
+                                                         time = "13:45"
+                                                 ),
+                                                 messageItem(
+                                                         from = "Support",
+                                                         message = "The new server is ready.",
+                                                         icon = icon("life-ring"),
+                                                         time = "2014-12-01",
+                                                         href = "www.abc.com"
+                                                 )
+                                    ),
+                                    dropdownMenu(type = "notifications",
+                                                 notificationItem(
+                                                         text = "5 new users today",
+                                                         icon("users")
+                                                 ),
+                                                 notificationItem(
+                                                         text = "12 items delivered",
+                                                         icon("truck"),
+                                                         status = "success"
+                                                 ),
+                                                 notificationItem(
+                                                         text = "Server load at 86%",
+                                                         icon = icon("exclamation-triangle"),
+                                                         status = "warning"
+                                                 )
+                                    ),
+                                    dropdownMenu(type = "tasks",
+                                                 taskItem(value = 90, color = "green",
+                                                          "Documentation"
+                                                 ),
+                                                 taskItem(value = 17, color = "aqua",
+                                                          "Project X"
+                                                 ),
+                                                 taskItem(value = 75, color = "yellow",
+                                                          "Server deployment"
+                                                 ),
+                                                 taskItem(value = 80, color = "red",
+                                                          "Overall project"
+                                                 )
+                                    )
+                    ),
+                    dashboardSidebar(
+                            sidebarMenu(
+                                    menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
+                                    menuItem("Widgets", tabName = "widgets", icon = icon("th"), badgeLabel = "new", badgeColor = "green"),
+                                    menuItem("Shiny Tutorial", icon = icon("archway"),
+                                             menuSubItem("dashboard template", tabName = "dashtem"),
+                                             menuSubItem("fluidRow() box()", tabName = "flbx"),
+                                             menuSubItem("Static dropdownMenu()", tabName = "stcdrop"),
+                                             menuSubItem("Dynamic dropdownMenu()", tabName = "dynmdrop"),
+                                             menuSubItem("example-1", tabName = "example-1"),
+                                             menuSubItem("example-2", tabName = "example-2"),
+                                             menuSubItem("misc", tabName = "misc")
+                                    )
+                            )
+                    ),
+                    dashboardBody(
+                            tabItems(
+                                    tabItem(tabName = "dashboard"),
+                                    tabItem(tabName = "widgets",
+                                            h2("Widgets tab content")
+                                    ),
+                                    tabItem(tabName = "dashtem",
+                                            'library(shiny)',br(),
+                                            'library(shinydashboard)',br(),br(),
+                                            'ui <- dashboardPage(skin = "green",',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'dashboardHeader(title = "Basic dashboard"),',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'dashboardSidebar(',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'sidebarMenu(',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'menuItem("Widgets", tabName = "widgets", icon = icon("th")),',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'menuItem("Shiny Tutorial", icon = icon("archway"),',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'menuSubItem("dashboard template", tabName = "dashtem"),',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'menuSubItem("example-1", tabName = "example-1"),',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'menuSubItem("example-2", tabName = "example-2")',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            ')',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            ')',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            '),',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'dashboardBody(',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'tabItems(',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'tabItem(tabName = "dashboard"),',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'tabItem(tabName = "widgets",',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'h2("Widgets tab content")',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            '),',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'tabItem(tabName = "dashtem")',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            ')',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            ')',br(),
+                                            ')',br(),br(),
+                                            'server <- function(input, output) { ',HTML("&nbsp;&nbsp;"),'}',br(),br(),
+                                            'shinyApp(ui, server)'
+                                    ),
+                                    
+                                    tabItem(tabName = "flbx",
+                                            fluidRow(
+                                                    box(plotOutput("plot1", height = 250)),
+                                                    
+                                                    box(
+                                                            title = "Controls",
+                                                            sliderInput("slider", "Number of observations:", 1, 100, 50)
+                                                    )
+                                            ),
+                                            '# ui',br(),
+                                            'fluidRow(',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'box(plotOutput("plot1", height = 250)),',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'box(',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'title = "Controls",',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'sliderInput("slider", "Number of observations:", 1, 100, 50)',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            ')',br(),
+                                            ')',br(),br(),
+                                            '# server',br(),
+                                            'set.seed(122)',br(),
+                                            'histdata <- rnorm(500)',br(),
+                                            'output$plot1 <- renderPlot({',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'data <- histdata[seq_len(input$slider)]',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'hist(data)',br(),
+                                            '})'
+                                    ),
+                                    
+                                    
+                                    tabItem(tabName = "stcdrop",
+                                            h3("Put this code inside dashboardHeader()"),
+                                            'dropdownMenu(type = "messages",',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                                 'messageItem(',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'from = "Sales Dept",',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'message = "Sales are steady this month.",',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'icon = shiny::icon("user"),',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'time = "2014-12-01",',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'href = "www.abc.com"',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            '),',br(),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            'messageItem(',br(),
+                                            'from = "New User",',br(),
+                                            'message = "How do I register?",',br(),
+                                            'icon = icon("question"),',br(),
+                                            'time = "13:45"',br(),
+                                            '),',br(),
+                                            'messageItem(',br(),
+                                            'from = "Support",',br(),
+                                            'message = "The new server is ready.",',br(),
+                                            'icon = icon("life-ring"),',br(),
+                                            'time = "2014-12-01",',br(),
+                                            'href = "www.abc.com"',br(),
+                                            ')',br(),
+                                            '),',br(),
+                                            'dropdownMenu(type = "notifications",',br(),
+                                            'notificationItem(',br(),
+                                            'text = "5 new users today",',br(),
+                                            'icon("users")',br(),
+                                            '),',br(),
+                                            'notificationItem(',br(),
+                                            'text = "12 items delivered",',br(),
+                                            'icon("truck"),',br(),
+                                            'status = "success"',br(),
+                                            '),',br(),
+                                            'notificationItem(',br(),
+                                            'text = "Server load at 86%",',br(),
+                                            'icon = icon("exclamation-triangle"),',br(),
+                                            'status = "warning"',br(),
+                                            ')',br(),
+                                            '),',br(),
+                                            'dropdownMenu(type = "tasks",',br(),
+                                            'taskItem(value = 90, color = "green",',br(),
+                                            '"Documentation"',br(),
+                                            '),',br(),
+                                            'taskItem(value = 17, color = "aqua",',br(),
+                                            '"Project X"',br(),
+                                            '),',br(),
+                                            'taskItem(value = 75, color = "yellow",',br(),
+                                            '"Server deployment"',br(),
+                                            '),',br(),
+                                            'taskItem(value = 80, color = "red",',br(),
+                                            '"Overall project"',br(),
+                                            ')',br(),
+                                            ')'
+                                    ),
+                                    
+                                    
+                                    tabItem(tabName = "dynmdrop",
+                                            h3("Put"),
+                                            'In most cases, you will want to make the content dynamic. That means that the HTML content is generated on',br(),
+                                            'the server side and sent to the client for rendering. In the UI code, you would use dropdownMenuOutput like this:',br(),
+                                            code('dashboardHeader(dropdownMenuOutput("messageMenu"))'),br(),
+                                            'And on the server side, you would generate the entire menu in a renderMenu, like this:',br(),br(),
+                                            
+                                            'output$messageMenu <- renderMenu({',br(),
+                                            '# Code to generate each of the messageItems here, in a list. This assumes',br(),
+                                            '# that messageData is a data frame with two columns, "from" and "message".',br(),
+                                            'msgs <- apply(messageData, 1, function(row) {',br(),
+                                            'messageItem(from = row[["from"]], message = row[["message"]])',br(),
+                                            '})',br(),
+                                            '# This is equivalent to calling:',br(),
+                                            '#   dropdownMenu(type="messages", msgs[[1]], msgs[[2]], ...)',br(),
+                                            'dropdownMenu(type = "messages", .list = msgs)',br(),
+                                            '})'
+                                    ),
+                                    
+                                    
+                                    tabItem(tabName = "misc",
+                                            h4("Disable the header"),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            code("dashboardHeader(disable = TRUE)"),br(),br(),
+                                            h4("Disable the sidebar"),HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"),
+                                            code("dashboardSidebar(disable = TRUE)")
+                                    )
+                            )
+                    )
+)
+
+server <- function(input, output) {
+        set.seed(122)
+        histdata <- rnorm(500)
+        
+        output$plot1 <- renderPlot({
+                data <- histdata[seq_len(input$slider)]
+                hist(data)
+        })
+}
+
+shinyApp(ui, server)
+```
