@@ -15,9 +15,9 @@
 
 <br/>
 
-### By Baye's Formula,
-_**P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )**_<br/>
-_**PPV = TS x PD / ( TS x PD + P(+|~D)*P(~D) )**_
+## By Baye's Formula,
+### _**P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )**_<br/>
+### _**PPV = TS x PD / ( TS x PD + P(+|~D)*P(~D) )**_
 
 ### Recall,
 > _**P(+|~D) = 1 - P(+|D) = 1 - Test specificity**_<br/>
