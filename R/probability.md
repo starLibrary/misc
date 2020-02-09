@@ -1,4 +1,4 @@
-Accuracy rates of the test
+# Accuracy rates of the test
 > - ### Test sensitivity : P(+|D) :
             positive result when the patient has disease
 > - ### Test specificity : P(-|~D) :
