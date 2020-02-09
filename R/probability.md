@@ -35,7 +35,7 @@
 > _**The diagnostic likelihood ratio of a negative test**_
 
 ### Recall that,
-_**P(+|D) and P(-|~D), (test sensitivity and specificity respectively) are accuracy rates of a diagnostic test for the two possible results. They should be close to 1 because no one would take an inaccurate test.**_
+> _**P(+|D) and P(-|~D), (test sensitivity and specificity respectively) are accuracy rates of a diagnostic test for the two possible results. They should be close to 1 because no one would take an inaccurate test.**_
 
 P(D|+) / P(~D|+) =
         P(+|D) * P(D) / (P(+|~D) * P(~D)) =
