@@ -1,10 +1,9 @@
 Accuracy rates of the test
-    Test sensitivity : 
-            positive result when the patient has disease : P(+|D)
-    Test specificity :
-            negative test result when the patient doesnt have disease : P(-|~D)
-    
-    Prevalence of disease : P(D)
+> -    Test sensitivity : P(+|D) :
+            positive result when the patient has disease
+> -    Test specificity : P(-|~D) :
+            negative test result when the patient doesnt have disease
+Prevalence of disease : P(D)
     
     
 Positive predictive value : P(D|+) :
