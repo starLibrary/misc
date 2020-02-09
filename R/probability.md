@@ -2,14 +2,14 @@
 - ### Test sensitivity : P(+|D)
 > _**positive result when the patient has disease**_
 - ### Test specificity : P(-|~D)
-> _**negative test result when the patient doesnt have disease**_
+> _**negative test result when the patient doesn't have disease**_
             
 ### Prevalence of disease : P(D)
     
 > - ### Positive predictive value : P(D|+)
         the probability that a patient has the disease given a positive test result
 > - ### Negative predictive value : P(~D|-)
-        the probability that a patient does not have the disease given a negative test result
+        the probability that a patient doesn't have the disease given a negative test result
             
 By Bayes Formula,    _P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )_
 
