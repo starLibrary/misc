@@ -29,9 +29,10 @@
 
 
 - ### DLR_+ = P(+|D) / P(+|~D)
-> _**The diagnostic likelihood ratio of a positive test**_
+> _**The diagnostic likelihood (of the disease) ratio of a positive test**_
 
 - ### DLR_- = P(-|D) / P(-|~D)
+> _**The diagnostic likelihood (of the disease) ratio of a negative test**_
 
 Recall that P(+|D) and P(-|~D), (test sensitivity and specificity respectively)
 are accuracy rates of a diagnostic test for the two possible results. They should
