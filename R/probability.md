@@ -20,7 +20,7 @@ _**P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )**_<br/>
 _**PPV = TS x PD / ( TS x PD + P(+|~D)*P(~D) )**_
 
 ### Recall,
-> _**P(+|~D) = 1 - P(+|D) = 1 - Test specificity**_
+> _**P(+|~D) = 1 - P(+|D) = 1 - Test specificity**_<br/>
 > _**P(~D) = 1 - P(D)   = 1 - Prevalence of disease**_
 
 Substituting         P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + [1-P(-|~D)]*[1-P(D)] )
