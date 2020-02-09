@@ -16,8 +16,8 @@
 <br/>
 
 ## By Bayes' Formula,
-### **P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )**
-### **PPV = TS x PD / ( TS x PD + P(+|~D)*P(~D) )**
+**P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )**<br/>
+**PPV = TS x PD / ( TS x PD + P(+|~D)*P(~D) )**
 
 ### Recall,
 > _**P(+|~D) = 1 - P(+|D) = 1 - Test specificity**_<br/>
