@@ -16,8 +16,8 @@
 <br/>
 
 ### By Baye's Formula,
-> _**P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )**_<br/>
-> _**PPV = TS x PD / ( TS x PD + P(+|~D)*P(~D) )**_
+_**P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )**_<br/>
+_**PPV = TS x PD / ( TS x PD + P(+|~D)*P(~D) )**_
 
 Recall,   P(+|~D) = 1 - P(+|D) = 1 - Test specificity
             P(~D) = 1 - P(D)   = 1 - Prevalence of disease
