@@ -28,10 +28,11 @@
 <b>PPV =   TSxPD / {TSxPD  +  1-TSx1-PD}</b>
 
 
-DLR_+ : The diagnostic likelihood ratio of a positive test
-DLR_+ = P(+|D) / P(+|~D)
+- ### DLR_+
+> _**The diagnostic likelihood ratio of a positive test**_
+> _**DLR_+ = P(+|D) / P(+|~D)**_
 
-DLR_- = P(-|D) / P(-|~D)
+- ### DLR_- = P(-|D) / P(-|~D)
 
 Recall that P(+|D) and P(-|~D), (test sensitivity and specificity respectively)
 are accuracy rates of a diagnostic test for the two possible results. They should
