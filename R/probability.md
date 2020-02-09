@@ -3,15 +3,18 @@
 > _**positive result when the patient has disease**_
 - ### Test specificity : P(-|~D)
 > _**negative test result when the patient doesn't have disease**_
-            
-### Prevalence of disease : P(D)
-    
+
+
+- ### Prevalence of disease : P(D)
+
+
 > - ### Positive predictive value : P(D|+)
-        the probability that a patient has the disease given a positive test result
+> _**the probability that a patient has the disease given a positive test result**_
 > - ### Negative predictive value : P(~D|-)
-        the probability that a patient doesn't have the disease given a negative test result
-            
-By Bayes Formula,    _P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )_
+> _**the probability that a patient doesn't have the disease given a negative test result**_
+
+
+By Bayes Formula,    _**P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )**_
 
 Recall,   P(+|~D) = 1 - P(+|D) = 1 - Test specificity
             P(~D) = 1 - P(D)   = 1 - Prevalence of disease
