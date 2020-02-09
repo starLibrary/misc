@@ -8,9 +8,9 @@
 - ### Prevalence of disease : P(D)
 
 
-> - ### Positive predictive value : P(D|+)
+- ### Positive predictive value : P(D|+)
 > _**the probability that a patient has the disease given a positive test result**_
-> - ### Negative predictive value : P(~D|-)
+- ### Negative predictive value : P(~D|-)
 > _**the probability that a patient doesn't have the disease given a negative test result**_
 
 
