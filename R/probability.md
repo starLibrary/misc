@@ -28,9 +28,8 @@
 <b>PPV =   TSxPD / {TSxPD  +  1-TSx1-PD}</b>
 
 
-- ### DLR_+
+- ### DLR_+ = P(+|D) / P(+|~D)
 > _**The diagnostic likelihood ratio of a positive test**_
-> _**DLR_+ = P(+|D) / P(+|~D)**_
 
 - ### DLR_- = P(-|D) / P(-|~D)
 
