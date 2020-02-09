@@ -1,7 +1,7 @@
 # Accuracy rates of the test
-> - ### Test sensitivity : P(+|D)
+- ### Test sensitivity : P(+|D)
 > _**positive result when the patient has disease**_
-> - ### Test specificity : P(-|~D)
+- ### Test specificity : P(-|~D)
 > _**negative test result when the patient doesnt have disease**_
             
 ### Prevalence of disease : P(D)
