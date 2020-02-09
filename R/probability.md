@@ -20,14 +20,12 @@
 <b>PPV = TS x PD / ( TS x PD + P(+|~D)*P(~D) )</b>
 
 ### Recall,
-> _**P(+|~D) = 1 - P(+|D) = 1 - Test specificity**_<br/>
-> _**P(~D) = 1 - P(D)   = 1 - Prevalence of disease**_
+> _**P(+|~D)  =  1 - P(+|D)  =  1 - Test specificity  =  1 - TS**_<br/>
+> _**P(~D) = 1 - P(D)   = 1 - Prevalence of disease  =  1 - PD**_
 
 ### Substituting
-P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + [1-P(-|~D)]*[1-P(D)] )
-
-Positive predictive value =   Test sensitivity * Prevalence of disease /
-                            1-Test specificity * 1-Prevalence of disease
+**P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + [1-P(-|~D)]*[1-P(D)] )**<br/>
+<b>PPV =   TS x PD / TS x PD  +  1-TS x 1-PD</b>
 
 
 DLR_+ : The diagnostic likelihood ratio of a positive test
