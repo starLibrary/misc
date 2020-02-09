@@ -25,7 +25,7 @@
 
 ### Substituting
 **P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + [1-P(-|~D)]*[1-P(D)] )**<br/>
-<b>PPV =   TSxPD / {TSxPD  +  1-TS x 1-PD}</b>
+<b>PPV =   TS*PD / {TS*PD  +  1-TS*1-PD}</b>
 
 
 DLR_+ : The diagnostic likelihood ratio of a positive test
