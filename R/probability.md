@@ -19,7 +19,7 @@
 **P(D|+) &nbsp;&nbsp;&nbsp;= &nbsp;&nbsp;&nbsp;P(+|D)xP(D) &nbsp;&nbsp;&nbsp;/ &nbsp;&nbsp;&nbsp;( P(+|D)xP(D) &nbsp;&nbsp;&nbsp;+ &nbsp;&nbsp;&nbsp;P(+|~D)xP(~D) )**<br/>
 <b>PPV = TS x PD / ( TS x PD + P(+|~D)*P(~D) )</b>
 
-### Recall,
+### Recall that,
 > _**P(+|~D) &nbsp;&nbsp;&nbsp;= &nbsp;&nbsp;&nbsp;1 - P(+|D) &nbsp;&nbsp;&nbsp;= &nbsp;&nbsp;&nbsp;1 - Test specificity &nbsp;&nbsp;&nbsp;= &nbsp;&nbsp;&nbsp;1 - TS**_<br/>
 > _**P(~D) &nbsp;&nbsp;&nbsp;= &nbsp;&nbsp;&nbsp;1 - P(D) &nbsp;&nbsp;&nbsp;= &nbsp;&nbsp;&nbsp;1 - Prevalence of disease &nbsp;&nbsp;&nbsp;= &nbsp;&nbsp;&nbsp;1 - PD**_
 
@@ -34,9 +34,8 @@
 - ### DLR_- = P(-|D) / P(-|~D)
 > _**The diagnostic likelihood ratio of a negative test**_
 
-Recall that P(+|D) and P(-|~D), (test sensitivity and specificity respectively)
-are accuracy rates of a diagnostic test for the two possible results. They should
-be close to 1 because no one would take an inaccurate test
+### Recall that,
+_**P(+|D) and P(-|~D), (test sensitivity and specificity respectively) are accuracy rates of a diagnostic test for the two possible results. They should be close to 1 because no one would take an inaccurate test.**_
 
 P(D|+) / P(~D|+) =
         P(+|D) * P(D) / (P(+|~D) * P(~D)) =
