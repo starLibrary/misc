@@ -37,10 +37,10 @@
 ### Recall that,
 > _**P(+|D) and P(-|~D), (test sensitivity and specificity respectively) are accuracy rates of a diagnostic test for the two possible results. They should be close to 1 because no one would take an inaccurate test.**_
 
-P(D|+) / P(~D|+) =
-        P(+|D) * P(D) / (P(+|~D) * P(~D)) =
-        P(+|D)/P(+|~D) * P(D)/P(~D) =
-        DLR_+ * P(D)/P(~D)
+P(D|+) / P(~D|+) =<br/>
+ &nbsp;&nbsp;&nbsp;P(+|D) * P(D) / (P(+|~D) * P(~D)) =<br/>
+ &nbsp;&nbsp;&nbsp;P(+|D)/P(+|~D) * P(D)/P(~D) =<br/>
+ &nbsp;&nbsp;&nbsp;DLR_+ * P(D)/P(~D)
 
 The left side of the equation represents the post-test odds of disease
 given a positive test result : P(D|+)/P(~D|+)
