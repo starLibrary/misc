@@ -16,7 +16,7 @@
 <br/>
 
 ## By Bayes' Formula,
-**P(D|+) &nbsp;&nbsp;&nbsp;= P(+|D)*P(D) / ( P(+|D)*P(D) &nbsp;&nbsp;&nbsp;+ &nbsp;&nbsp;&nbsp;P(+|~D)*P(~D) )**<br/>
+**P(D|+) &nbsp;&nbsp;&nbsp;= P(+|D)*P(D) &nbsp;&nbsp;&nbsp;/ &nbsp;&nbsp;&nbsp;( P(+|D)*P(D) &nbsp;&nbsp;&nbsp;+ &nbsp;&nbsp;&nbsp;P(+|~D)*P(~D) )**<br/>
 <b>PPV = TS x PD / ( TS x PD + P(+|~D)*P(~D) )</b>
 
 ### Recall,
