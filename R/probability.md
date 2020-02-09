@@ -1,19 +1,17 @@
 # Accuracy rates of the test
-> - ### Test sensitivity : P(+|D) :
+> - ### Test sensitivity : P(+|D)
             positive result when the patient has disease
-> - ### Test specificity : P(-|~D) :
+> - ### Test specificity : P(-|~D)
             negative test result when the patient doesnt have disease
             
 ### Prevalence of disease : P(D)
     
-> - ### Positive predictive value : P(D|+) :
+> - ### Positive predictive value : P(D|+)
         the probability that a patient has the disease given a positive test result
-> - ### Negative predictive value : P(~D|-) :
+> - ### Negative predictive value : P(~D|-)
         the probability that a patient does not have the disease given a negative test result
             
-    
-
-By Bayes Formula,    P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )
+By Bayes Formula,    _P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )_
 
 Recall,   P(+|~D) = 1 - P(+|D) = 1 - Test specificity
             P(~D) = 1 - P(D)   = 1 - Prevalence of disease
