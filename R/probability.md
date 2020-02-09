@@ -20,7 +20,7 @@
 <b>PPV = TS x PD / ( TS x PD + P(+|~D)*P(~D) )</b>
 
 ### Recall,
-> _**P(+|~D) &nbsp;=  1 - P(+|D)  =  1 - Test specificity  =  1 - TS**_<br/>
+> _**P(+|~D) &nbsp;&nbsp;&nbsp;= &nbsp;&nbsp;&nbsp;1 - P(+|D) &nbsp;&nbsp;&nbsp;= &nbsp;&nbsp;&nbsp;1 - Test specificity &nbsp;&nbsp;&nbsp;= &nbsp;&nbsp;&nbsp;1 - TS**_<br/>
 > _**P(~D) = 1 - P(D)   = 1 - Prevalence of disease  =  1 - PD**_
 
 ### Substituting
