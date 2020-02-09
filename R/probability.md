@@ -13,8 +13,9 @@
 - ### Negative predictive value : P(~D|-)
 > _**the probability that a patient doesn't have the disease given a negative test result**_
 
+<br/>
 
-By Bayes Formula,    _**P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )**_
+### By Bayes Formula,    _**P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )**_
 
 Recall,   P(+|~D) = 1 - P(+|D) = 1 - Test specificity
             P(~D) = 1 - P(D)   = 1 - Prevalence of disease
