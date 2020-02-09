@@ -16,7 +16,7 @@
 <br/>
 
 ### By Baye's Formula,
-> _**P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )**_
+> _**P(D|+) = P(+|D)*P(D) / ( P(+|D)*P(D) + P(+|~D)*P(~D) )**_<br/>
 > _**Positive predictive value = Test sensitivity*Prevalence of disease / ( Test sensitivity*Prevalence of disease + P(+|~D)*P(~D) )**_
 
 Recall,   P(+|~D) = 1 - P(+|D) = 1 - Test specificity
